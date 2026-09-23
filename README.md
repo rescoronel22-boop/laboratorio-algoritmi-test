@@ -131,7 +131,7 @@ Implementare una libreria che offra un algoritmo di ordinamento **ibrido** che c
 - Per array di dimensione maggiore o uguale a una soglia `k`, utilizzare QuickSort.
 - Per array di dimensione minore di `k`, utilizzare SelectionSort.
 
-La ratio di un tale combinazione risiede nell'ipotesi che SelectionSort, pur avendo complessità O(n²), possa risultare più efficiente di QuickSort su array molto piccoli a causa del minor overhead nelle operazioni elementari.
+La ratio di una tale combinazione risiede nell'ipotesi che SelectionSort, pur avendo complessità O(n²), possa risultare più efficiente di QuickSort su array molto piccoli a causa del minor overhead nelle operazioni elementari.
 
 ### Ulteriori specifiche per l'implementazione:
 
@@ -176,7 +176,7 @@ Implementare, avvalendosi del supporto di un sistema basato su un Large Language
 
 ### Ulteriori specifiche per l'implementazione:
 
-1. La libreria deve essere generica, nel senso che deve consentire tavole hash con un numero qualsiasi di coppie <chiave,valore>, in cui i tipi di chiavi e valori non sono noti a priori (tutte le chiavi hanno uno stesso tipo, tutti i valori hanno uno stesso tipo, ma chiavi e valori possono avere tipi fra loro differenti).
+1. La libreria deve essere generica, nel senso che deve consentire tavole hash con un numero qualsiasi di coppie <chiave,valore>, in cui i tipi di chiavi e valori non sono noti a priori (si tenga presente che tutte le chiavi devono avere uno stesso tipo, tutti i valori devono avere uno stesso tipo, ma chiavi e valori possono avere tipi fra loro differenti).
 
 La struttura dati deve offrire almeno le seguenti funzionalità (ricavare il significato delle varie funzioni e procedure e dei loro parametri a partire dai loro prototipi e da quanto studiato nella parte di teoria del corso), per le quali è richiesta un'implementazione che rispetti le complessità computazionali tipiche di questo tipo di struttura dati:
 
@@ -222,7 +222,7 @@ Implementare una libreria generica che realizza la struttura dati *Union-Find-Se
 2. L'implementazione deve rappresentare la collezione di insiemi come una foresta di insiemi disgiunti
 3. L'implementazione deve adottare le due euristiche note come *unione per rango* e *compressione del cammino*, viste nella parte di teoria del corso;
 4. Le eventuali tavole hash usate nell'implementzione devono essere realizzate con la libreria implementata nell'Esercizio 2;
-5. L'implementazione deve essere computazionalmente efficiente (in particolare, le scelte implementative non devono vanificare l'apporto all'efficienza delle due euristiche citate sopra)
+5. L'implementazione deve essere computazionalmente efficiente (in particolare, le scelte implementative non devono vanificare l'apporto all'efficienza delle due euristiche citate sopra).
 
 La struttura dati deve offrire almeno le seguenti funzionalità (ricavare il significato delle varie funzioni, procedure e dei loro parametri a partire dai loro prototipi e da quanto studiato nella parte di teoria del corso):
 
@@ -248,7 +248,7 @@ Implementare gli unit-test per la libreria secondo le indicazioni suggerite nel 
 
 ## Esercizio 4 - Libreria per Grafi sparsi e algoritmo di Kruskal
 
-Implementare una libreria che realizza la struttura dati *Grafo* in modo che sia ottimale per dati sparsi
+Implementare una libreria generica che realizza la struttura dati *Grafo* in modo che sia ottimale per dati sparsi
 (**attenzione**: le scelte implementative che farete dovranno essere giustificate in relazione alle nozioni presentate
 durante le lezioni in aula).
 
@@ -418,7 +418,8 @@ Graph kruskal(const Graph gr,
 ```
 #### Ulteriori specifiche per l'implementazione:
 
-1. L'algoritmo deve sfruttare la struttura dati Union-UnionFind-Set implementata nell'Esercizio 3
+1. L'algoritmo deve sfruttare la struttura dati Union-UnionFind-Set implementata nell'Esercizio 3;
+2. Come specificato dal prototipo, l'algoritmo deve restituire un tipo Graph, cioè il tipo della struttura dati implementata nella prima parte di questo esercizio (si ricordi che ogni foresta è un grafo).
 
 #### Unit Testing
 
