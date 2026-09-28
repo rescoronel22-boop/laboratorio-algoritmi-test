@@ -27,7 +27,7 @@
 
 **Q: Sono uno/a studente/ssa del turno X vorrei lavorare in gruppo con uno/a studente/ssa del turno Y. Posso farlo?**
 
-**A**: No.
+**A**: Sì.
 
 **Q: Sono uno/a studente/ssa lavoratore/lavoratrice, è prevista qualche regola particolare per chi non frequenta?**
 
@@ -40,4 +40,3 @@
 **Q: E' possibile sostenere la prova di esame di laboratorio da remoto?**
 
 **A**: No.
-
