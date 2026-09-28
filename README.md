@@ -32,7 +32,7 @@ Come specificato nella descrizione ufficiale dell'insegnamento (https://laurea.i
 
 **Per poter sostenere la prova orale**, ogni studente/studentessa deve:
 - aver ottenuto la sufficienza nella prova scritta;
-- essersi inscritto/a all'appello tramite il sistema di Ateneo Esse3;
+- essersi iscritto/a all'appello tramite il sistema di Ateneo Esse3;
 - essersi prenotato/a (scegliendo data e ora tra quelle proposte) tramite un calendario messo a disposizione su Moodle dal/la docente del proprio turno in un momento successivo alla pubblicazione degli esiti della prova scritta. [Si tenga presente che, per ogni appello, le prove orali possono iniziare soltanto dopo la pubblicazione degli esiti della prova scritta, pertanto **è possibile (e probabile) che esse non si tengano nella data e ora ufficiale specificate sul sistema di Ateneo Esse3 e, inoltre, che esse proseguano per più giornate**]
 
 La prova orale deve essere sostenuta **nella medesima sessione della prova scritta superata** (si ricorda che le sessioni sono gennaio-febbraio 2027, giugno-luglio 2027, settembre 2027). Si noti che, per quelle sessioni per cui sono previsti due appelli, esisteranno due possibilità per sostenere la prova orale (primo o secondo appello della sessione); per le sessioni in cui è previsto un solo appello, la prova orale deve essere effettuata necessariamente in quell'appello. Nel caso in cui l'orale non venga superato entro i termini della sessione, lo scritto dovrà essere ripetuto.
