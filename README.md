@@ -13,46 +13,39 @@ Gli studenti e le studentesse che hanno nel piano di studi l'insegnamento di Alg
 
 ## Validità del progetto di laboratorio
 
-Le specifiche per il progetto di laboratorio descritte in questo documento resteranno valide fino all'ultimo appello relativo al corrente anno accademico **(vale a dire, quella di settembre 2026)** e non oltre! Gli appelli delle sessioni successive a quella dovranno essere sostenuti sulla base delle specifiche che verranno descritte nella prossima edizione del laboratorio di algoritmi.
+Le specifiche per il progetto di laboratorio descritte in questo documento resteranno valide fino all'ultimo appello relativo al corrente anno accademico **(vale a dire, quella di settembre 2027)** e non oltre! Gli appelli delle sessioni successive a quella dovranno essere sostenuti sulla base delle specifiche che verranno descritte nella prossima edizione del laboratorio di algoritmi.
 
 ## Gruppi di laboratorio e turni
 
-Il progetto di laboratorio può essere svolto individualmente o in gruppo (al più 3 persone). **I membri di uno stesso gruppo devono appartenere tutti allo stesso turno di laboratorio**. Un progetto di laboratorio eseguito da un gruppo costituito da membri appartenenti a turni diversi sarà annullato (e ai singoli membri sarà richiesto di rifarlo in gruppi regolarmente costituiti).
+Il progetto di laboratorio può essere svolto individualmente o in gruppo (al più 3 persone). **I gruppi di laboratorio possono essere costituiti anche da studenti e studentesse appartenenti a turni diversi**.
 
-Uno studente o una studentessa, assegnato/a al Turno X può spostarsi al Turno Y, **a patto che trovi un/a collega del turno Y che accetta di spostarsi al turno X**. La richiesta di spostamento deve essere inoltrata via email a entrambi i docenti di laboratorio dei turni coinvolti, da parte di una persona che intende effettuare lo scambio, mettendo in copia la persona disposta allo scambio inverso. Lo scambio si intende effettuato solo a seguito di esplicita autorizzazione (via email) da parte dei docenti.
+In caso di necessità e compatibilmente con i posti disponibili nelle aule, è possibile seguire le lezioni di laboratorio in turni diversi dal proprio, ma **la prova orale deve essere sostenuta con il/la docente del proprio turno**. In caso di insufficienza di posti nelle aule, gli studenti che seguono le lezioni del proprio turno hanno la precedenza.
 
-E' possibile effettuare un solo spostamento di turno durante uno stesso anno accademico. I docenti si riservano di respingere le richieste di spostamento che non dovessero pervenire con **congruo anticipo (min. 1 mese prima)** rispetto alla data dello scritto che si intende sostenere.
-
-## Algoritmo di esame
+## Regole d'esame
 
 Come specificato nella descrizione ufficiale dell'insegnamento (https://laurea.informatica.unito.it/do/corsi.pl/Show?_id=iw3r), l'esame di _Algoritmi e Strutture Dati_ consiste in una prova scritta, somministrata mediante la piattaforma Esami, ed in una seguente discussione orale del progetto di laboratorio.
 
-**Per poter sostenere lo scritto,** tutti i membri di un gruppo di laboratorio dovranno sottoporre il codice del progetto di laboratorio su tutti i correttori automatici messi a disposizione sulla pagina Moodle del Laboratorio di ASD, superandone **tutti i test.** Con un laboratorio il cui codice non dovesse superare qualche test (anche solo uno per un unico esercizio), non sarà possibile sostenere lo scritto. Stessa cosa in caso in cui mancasse la consegna di anche un solo esercizio, anche se altri membri del gruppo l'avessero consegnato. Inoltre, il progetto di laboratorio dovrà essere stato consegnato mediante GitLab (vedi sotto), cioè il repository del progetto deve essere stato condiviso con il docente di laboratorio interessato, e deve essere completo senza che vengano effettuati ulteriori commit dopo la data della prova scritta.
+**Per poter sostenere la prova scritta**, tutti i membri di un gruppo di laboratorio devono, entro la data dello scritto che intendono sostenere:
+- sottoporre il codice del progetto di laboratorio a tutti i correttori automatici messi a disposizione sulla pagina Moodle del Laboratorio di ASD, **superandone tutti i test.** Un laboratorio il cui codice non dovesse superare qualche test (anche solo uno per un unico esercizio) o che mancasse di qualche esercizio (anche se altri membri del gruppo l'avessero consegnato) non consente di sostenere lo scritto;
+- consegnare l'intero progetto di laboratorio (completo e senza la necessità di ulteriori commit dopo la data della prova scritta) mediante GitLab (vedi sotto);
+- compilare il questionario su Moodle (in cui indicare la composizione dei gruppi, l'URL del repository GitLab,...).
 
-Il superamento dello scritto permette di accedere alle prove orali **nella medesima sessione della prova scritta superata** (si ricorda che le sessioni sono gennaio-febbraio 2026, giugno-luglio 2026, settembre 2026). Si noti che per quelle sessioni per cui sono previsti due appelli esisteranno due possibilità per la sostenere la prova orale (primo o secondo appello della sessione); per le sessioni in cui è previsto un solo appello, la prova orale deve essere effettuata necessariamente in quell'appello. Nel caso in cui l'orale non venga superato entro i termini della sessione, lo scritto dovrà essere ripetuto. **La prova orale non si tiene nella data e ora ufficiale su esse3**, invece lo studente dovrà prenotarsi su moodle in un'attività apposita scegliendo una data e ora tra quelle proposte. L'attività con le date e ore sarà resa visibile solo una volta pubblicati i risultati dello scritto su esse3.
+**Per poter sostenere la prova orale**, ogni studente/studentessa deve:
+- aver ottenuto la sufficienza nella prova scritta;
+- essersi inscritto/a all'appello tramite il sistema di Ateneo Esse3;
+- essersi prenotato/a (scegliendo data e ora tra quelle proposte) tramite un calendario messo a disposizione su Moodle dal/la docente del proprio turno in un momento successivo alla pubblicazione degli esiti della prova scritta. [Si tenga presente che, per ogni appello, le prove orali possono iniziare soltanto dopo la pubblicazione degli esiti della prova scritta, pertanto **è possibile (e probabile) che esse non si tengano nella data e ora ufficiale specificate sul sistema di Ateneo Esse3 e, inoltre, che esse proseguano per più giornate**]
 
-Durante la prova orale, sarà facoltà del docente chiedere di eseguire gli algoritmi implementati su dati ulteriori, forniti dal docente stesso. Ugualmente, sarà facoltà del docente chiedere cambiamenti nel codice durante l'esame, per esempio per l'inclusione di ulteriori unit test o per la correzione di eventuali piccoli problemi di implementazione individuati durante la correzione. Al progetto non sarà comunque assegnato preventivamente un voto, ma esso costituirà la base per una discussione orale. In tale discussione la/il candidata/o dovrà dimostrare di conoscere sia gli aspetti teorici della materia, sia il codice consegnato.
+La prova orale deve essere sostenuta **nella medesima sessione della prova scritta superata** (si ricorda che le sessioni sono gennaio-febbraio 2027, giugno-luglio 2027, settembre 2027). Si noti che, per quelle sessioni per cui sono previsti due appelli, esisteranno due possibilità per sostenere la prova orale (primo o secondo appello della sessione); per le sessioni in cui è previsto un solo appello, la prova orale deve essere effettuata necessariamente in quell'appello. Nel caso in cui l'orale non venga superato entro i termini della sessione, lo scritto dovrà essere ripetuto.
 
-Il voto finale sarà la media pesata dei voti ottenuti nelle due prove scritta ed orale [in base ai crediti associati alle parti di teoria (6 CFU) e di laboratorio (3 CFU), nella media lo scritto peserà 6 e l'orale 3], valutate in 30+1 esimi, essendo comunque necessario il raggiungimento della sufficienza in entrambe le prove.
+In una sessione con due appelli, in caso la prova orale risulti insufficiente al primo appello, la prova scritta dovrà essere ripetuta, anche se si intende risostenere la prova orale nel secondo appello.
 
-### Esempio (caso di una sessione con 2 appelli):
+La prova orale è individuale. Studentesse/studenti appartenenti a uno stesso gruppo di laboratorio possono sostenere la prova orale in appelli diversi. Tuttavia, se membri di uno stesso gruppo sostengono la prova orale in uno stesso appello, è richiesto che essi si prenotino in fasce orarie consecutive.
 
-- la studentessa/lo studente X intende sostenere la prova scritta nel primo appello di una sessione con 2 appelli;
-- la studentessa/lo studente X deve assicurarsi che il progetto su GitLab, alla data della prova scritta che intende sostenere (in questo esempio, quella del primo appello della sessione), sia aggiornato alla versione che vuole presentare al docente di laboratorio;
-- la studentessa/lo studente X deve sottoporre il codice del progetto su tutti e 4 i correttori automatici messi a disposizione nella pagina Moodle del Laboratorio di ASD, assicurandosi che passi tutti i test;
-- se la studentessa/lo studente X supera la prova scritta nel primo appello della sessione, deve (pena la perdita del voto ottenuto nella prova scritta):
-    - iscriversi a uno dei due appelli orali della stessa sessione,
-    - prenotarsi su Moodle in uno degli slot messi a disposizione dal docente del turno di appartenenza,
-    - sostenere l'orale nello slot temporale prenotato.
+Al progetto di laboratorio non sarà assegnato preventivamente un voto, ma esso costituirà la base per una discussione orale. In tale discussione la/il candidata/o dovrà dimostrare di conoscere sia gli aspetti teorici della materia, sia il codice consegnato.
 
-Studentesse/studenti diversi, appartenenti allo stesso gruppo di laboratorio, possono sostenere la prova **scritta** nello stesso appello o in appelli diversi. Se studentesse/studenti diversi, appartenenti allo stesso gruppo, superano la prova scritta nello stesso appello, **devono** sostenere l' **orale** nello stesso appello orale. Se studentesse/studenti diversi, appartenenti allo stesso gruppo, superano la prova scritta in appelli diversi, **possono** sostenere l'**orale** in appelli diversi.
+Durante la prova orale, sarà facoltà del docente chiedere di eseguire gli algoritmi implementati su dati ulteriori, forniti dal docente stesso. Ugualmente, sarà facoltà del docente chiedere cambiamenti nel codice durante l'esame, per esempio per l'inclusione di ulteriori unit test o per la correzione di eventuali piccoli problemi di implementazione individuati durante la correzione.
 
-Ad esempio, si consideri un gruppo di laboratorio costituito dalle studentesse/dagli studenti X, Y e Z, e si supponga che i soli X e Y sostengano la prova scritta nel primo appello di una sessione con due appelli, X con successo, mentre Y con esito insufficiente. Devono essere rispettate le seguenti condizioni:
-
-- Alla data della prova scritta del primo appello della sessione, il progetto di laboratorio del gruppo su GitLab deve essere aggiornato alla versione che si intende presentare, e deve superare tutti i test automatici su Moodle.
-- Il solo studente X deve sostenere la prova orale nella stessa sessione in cui ha superato lo scritto,  procedendo come indicato nell'esempio riportato sopra, mentre Y e Z sosterranno la discussione quando avranno superato la prova scritta.
-- Supponiamo che Y e Z superino la prova scritta nell'appello di una sessione con un solo appello: essi dovranno sostenere la prova orale in quello stesso appello.
-- Gli studenti Y e Z dovranno, di norma, presentare la stessa versione del progetto di laboratorio che ha presentato lo studente X; eventuali modifiche al laboratorio successive alla discussione di X dovranno cioè essere di modesta entità, debitamente documentate (i.e., il log delle modifiche dovrà comparire su GitLab) e motivate.
+Il **voto finale** sarà la media pesata dei voti ottenuti nelle due prove scritta ed orale [in base ai crediti associati alle parti di teoria (6 CFU) e di laboratorio (3 CFU), nella media lo scritto peserà 6 e l'orale 3], valutate in 30+1 esimi, essendo comunque necessario il raggiungimento della sufficienza in entrambe le prove.
 
 # Indicazioni generali e suggerimenti
 
