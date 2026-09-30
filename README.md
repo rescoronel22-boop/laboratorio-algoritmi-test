@@ -19,7 +19,7 @@ Le specifiche per il progetto di laboratorio descritte in questo documento reste
 
 Il progetto di laboratorio può essere svolto individualmente o in gruppo (al più 3 persone). **I gruppi di laboratorio possono essere costituiti anche da studenti e studentesse appartenenti a turni diversi**.
 
-In caso di necessità e compatibilmente con i posti disponibili nelle aule, è possibile seguire le lezioni di laboratorio in turni diversi dal proprio, ma **la prova orale deve essere sostenuta con il/la docente del proprio turno**. In caso di insufficienza di posti nelle aule, gli studenti che seguono le lezioni del proprio turno hanno la precedenza.
+In caso di necessità e compatibilmente con i posti disponibili nelle aule, è possibile seguire le lezioni di laboratorio in turni diversi dal proprio, ma **la prova orale deve essere sostenuta con il/la docente del proprio turno**. In caso di insufficienza di posti nelle aule, gli studenti che seguono le lezioni del proprio turno hanno la precedenza. Causa possibile affollamento nelle aule, nelle prime due o tre settimane, resta comunque fortemente sconsigliato seguire lezioni di turni diversi dal proprio.
 
 ## Regole d'esame
 
