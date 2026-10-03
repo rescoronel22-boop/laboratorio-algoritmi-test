@@ -124,3 +124,58 @@ Si noti che la funzione ```assert``` usata nell'esempio non è stata pensata per
 fare unit testing in C e fornisce solo funzionalità molto limitate in questo
 senso. Dati i vincoli e i problemi spiegati sopra, un'implementazione lungo
 la linea mostrata sarà comunque considerata pienamente accettabile.
+
+## Unit testing in Java
+
+Questa sezione riguarda i soli esercizi svolti in Java secondo la specifica
+descritta nel documento [README-coorti-precedenti.md](README-coorti-precedenti.md).
+
+La libreria di unit testing più usata in ambito Java è JUnit. Nel seguito si fa
+riferimento a JUnit 4; l'uso di versioni successive è ammesso.
+
+Un test in JUnit è un metodo marcato con l'annotazione ```@Test```. Tali metodi
+possono usare un certo numero di funzioni messe a disposizione dalla libreria
+per verificare la correttezza del programma. Ad esempio:
+
+```Java
+import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
+public class TestSorting {
+  @Test
+  public void testSortEmptyArray() {
+    MySortingAlgorithm sorter = new MySortingAlgorithm();
+    int[] a = {};
+    assertArrayEquals( new int[]{}, sorter.sort(a) );
+  }
+
+  @Test
+  public void testSortNullArray() {
+    MySortingAlgorithm sorter = new MySortingAlgorithm();
+    int[] a = null;
+    assertArrayEquals( null, sorter.sort(a) );
+  }
+}
+```
+
+JUnit crea una nuova istanza della classe di test prima di eseguire ciascun
+metodo di test e non garantisce l'ordine di esecuzione dei metodi. Nel caso in
+questione ciò non influisce sul risultato. Le cose sarebbero diverse se la
+classe di test memorizzasse dati in variabili di classe condivise fra i test.
+
+### Compilazione ed esecuzione
+
+Le librerie di JUnit 4 (`junit` e `hamcrest-core`) si possono scaricare dal sito
+di JUnit 4 (https://junit.org/junit4/). Per compilare ed eseguire le classi di
+test è necessario aggiungere le due librerie al classpath di Java.
+
+Esempio, con i file `.jar` nella cartella `lib`, i sorgenti nella cartella `src`
+e le classi compilate nella cartella `bin`:
+
+```bash
+javac -cp "lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar" -d bin src/mypackage/*.java
+java -cp "bin:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore mypackage.TestSorting
+```
+
+L'argomento di `JUnitCore` è il nome della classe che contiene i test,
+comprensivo del package.

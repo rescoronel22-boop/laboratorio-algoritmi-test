@@ -2,10 +2,9 @@
 
 # Regole d'esame
 
-
 ## Studenti e studentesse di anni precedenti il 2024/2025
 
-Gli studenti e le studentesse iscritti/e al secondo anno in un anno accademico precedente il 2024/2025 **possono** svolgere tutti gli esercizi di laboratorio interamente in C (come indicato nella presente specifica), oppure i primi due esercizi in C e gli ultimi due in Java.
+Gli studenti e le studentesse iscritti/e al secondo anno in un anno accademico precedente il 2024/2025 **possono** svolgere tutti gli esercizi di laboratorio interamente in C (come indicato nella presente specifica), oppure svolgere quattro esercizi, i primi due in C e gli ultimi due in Java, come indicato nel documento [README-coorti-precedenti.md](README-coorti-precedenti.md).
 
 ## Studenti e studentesse con Algoritmi non di 9 CFU
 
@@ -13,31 +12,31 @@ Gli studenti e le studentesse che hanno nel piano di studi l'insegnamento di Alg
 
 ## Validità del progetto di laboratorio
 
-Le specifiche per il progetto di laboratorio descritte in questo documento resteranno valide fino all'ultimo appello relativo al corrente anno accademico **(vale a dire, quella di settembre 2027)** e non oltre! Gli appelli delle sessioni successive a quella dovranno essere sostenuti sulla base delle specifiche che verranno descritte nella prossima edizione del laboratorio di algoritmi.
+Le specifiche per il progetto di laboratorio descritte in questo documento resteranno valide fino all'ultimo appello relativo al corrente anno accademico **(vale a dire, quello della sessione di settembre 2027)** e non oltre! Gli appelli delle sessioni successive a quella dovranno essere sostenuti sulla base delle specifiche che verranno descritte nella prossima edizione del laboratorio di algoritmi.
 
 ## Gruppi di laboratorio e turni
 
 Il progetto di laboratorio può essere svolto individualmente o in gruppo (al più 3 persone). **I gruppi di laboratorio possono essere costituiti anche da studenti e studentesse appartenenti a turni diversi**.
 
-In caso di necessità e compatibilmente con i posti disponibili nelle aule, è possibile seguire le lezioni di laboratorio in turni diversi dal proprio, ma **la prova orale deve essere sostenuta con il/la docente del proprio turno**. In caso di insufficienza di posti nelle aule, gli studenti che seguono le lezioni del proprio turno hanno la precedenza. Causa possibile affollamento nelle aule, nelle prime due o tre settimane, resta comunque fortemente sconsigliato seguire lezioni di turni diversi dal proprio.
+In caso di necessità e compatibilmente con i posti disponibili nelle aule, è possibile seguire le lezioni di laboratorio in turni diversi dal proprio, ma **la prova orale deve essere sostenuta con il/la docente del proprio turno**. In caso di insufficienza di posti nelle aule, gli studenti che seguono le lezioni del proprio turno hanno la precedenza. A causa del possibile affollamento delle aule, nelle prime due o tre settimane resta comunque fortemente sconsigliato seguire lezioni di turni diversi dal proprio.
 
-## Regole d'esame
+## Modalità d'esame
 
 Come specificato nella descrizione ufficiale dell'insegnamento (https://laurea.informatica.unito.it/do/corsi.pl/Show?_id=iw3r), l'esame di _Algoritmi e Strutture Dati_ consiste in una prova scritta, somministrata mediante la piattaforma Esami, ed in una seguente discussione orale del progetto di laboratorio.
 
 **Per poter sostenere la prova scritta**, tutti i membri di un gruppo di laboratorio devono, entro la data dello scritto che intendono sostenere:
 - sottoporre il codice del progetto di laboratorio a tutti i correttori automatici messi a disposizione sulla pagina Moodle del Laboratorio di ASD, **superandone tutti i test.** Un laboratorio il cui codice non dovesse superare qualche test (anche solo uno per un unico esercizio) o che mancasse di qualche esercizio (anche se altri membri del gruppo l'avessero consegnato) non consente di sostenere lo scritto;
 - consegnare l'intero progetto di laboratorio (completo e senza la necessità di ulteriori commit dopo la data della prova scritta) mediante GitLab (vedi sotto);
-- compilare il questionario su Moodle (in cui indicare la composizione dei gruppi, l'URL del repository GitLab,...).
+- compilare il questionario su Moodle (in cui indicare la composizione dei gruppi, l'URL del repository GitLab, ...).
 
 **Per poter sostenere la prova orale**, ogni studente/studentessa deve:
 - aver ottenuto la sufficienza nella prova scritta;
 - essersi iscritto/a all'appello tramite il sistema di Ateneo Esse3;
-- essersi prenotato/a (scegliendo data e ora tra quelle proposte) tramite un calendario messo a disposizione dal/la docente del proprio turno in un momento successivo alla pubblicazione degli esiti della prova scritta. [Si tenga presente che, per ogni appello, le prove orali possono iniziare soltanto dopo la pubblicazione degli esiti della prova scritta, pertanto **è possibile (e probabile) che esse non si tengano nella data e ora ufficiale specificate sul sistema di Ateneo Esse3 e, inoltre, che esse proseguano per più giornate**]
+- essersi prenotato/a (scegliendo data e ora tra quelle proposte) tramite un calendario messo a disposizione dal/la docente del proprio turno in un momento successivo alla pubblicazione degli esiti della prova scritta. [Si tenga presente che, per ogni appello, le prove orali possono iniziare soltanto dopo la pubblicazione degli esiti della prova scritta, pertanto **è possibile (e probabile) che esse non si tengano nella data e ora ufficiale specificate sul sistema di Ateneo Esse3 e, inoltre, che esse proseguano per più giornate**].
 
 La prova orale deve essere sostenuta **nella medesima sessione della prova scritta superata** (si ricorda che le sessioni sono gennaio-febbraio 2027, giugno-luglio 2027, settembre 2027). Si noti che, per quelle sessioni per cui sono previsti due appelli, esisteranno due possibilità per sostenere la prova orale (primo o secondo appello della sessione); per le sessioni in cui è previsto un solo appello, la prova orale deve essere effettuata necessariamente in quell'appello. Nel caso in cui l'orale non venga superato entro i termini della sessione, lo scritto dovrà essere ripetuto.
 
-In una sessione con due appelli, in caso la prova orale risulti insufficiente al primo appello, la prova scritta dovrà essere ripetuta, anche se si intende risostenere la prova orale nel secondo appello.
+In una sessione con due appelli, nel caso in cui la prova orale risulti insufficiente al primo appello, la prova scritta dovrà essere ripetuta, anche se si intende risostenere la prova orale nel secondo appello.
 
 La prova orale è individuale. Studentesse/studenti appartenenti a uno stesso gruppo di laboratorio possono sostenere la prova orale in appelli diversi. Tuttavia, se membri di uno stesso gruppo sostengono la prova orale in uno stesso appello, è richiesto che essi si prenotino in fasce orarie consecutive.
 
@@ -84,7 +83,7 @@ Come indicato sotto, alcuni esercizi chiedono di implementare **codice generico*
 
 ## Relazione sugli esercizi
 
-La relazione, per quegli esercizi che la richiedono, deve essere inserita in formato _MarkDown_ nel file README.md del progetto, divenendo così parte integrante della documentazione.
+La relazione, per quegli esercizi che la richiedono, deve essere inserita in formato _Markdown_ nel file README.md del progetto, divenendo così parte integrante della documentazione.
 
 ## Unit Testing
 
@@ -110,12 +109,14 @@ Per "buona qualità" intendiamo codice ben organizzato, ben modularizzato, ben c
 - tutti i nomi (es., nomi di variabili, di funzioni, di tipi, ecc.) *devono* essere significativi e in inglese;
 - il codice deve essere correttamente indentato; impostare l'indentazione a 2 o 4 caratteri e impostare l'editor in modo che inserisca "soft tabs" (cioè, deve inserire il numero corretto di spazi invece che un carattere di tabulazione);
 - per dare i nomi agli identificatori, seguire le convenzioni in uso per il linguaggio C:
-  - macro e costanti sono tutti in maiuscolo e in formato snake case (es. THE\_MACRO, THE\_CONSTANT); i nomi di tipo (e.g.  struct, typedefs, enums, ...) iniziano con una lettera maiuscola e proseguono in camel case (e.g., TheType, TheStruct); i nomi di funzione iniziano con una lettera minuscola e proseguono in snake case (e.g., the\_function());
+  - macro e costanti sono tutti in maiuscolo e in formato snake case (es. THE\_MACRO, THE\_CONSTANT); i nomi di tipo (e.g. struct, typedefs, enums, ...) iniziano con una lettera maiuscola e proseguono in camel case (e.g., TheType, TheStruct); i nomi di funzione iniziano con una lettera minuscola e proseguono in snake case (e.g., the\_function());
 - i file vanno salvati in formato UTF-8.
 
 # Consegne per gli esercizi
 
 Come detto sopra, in sede di discussione d'esame, sarà facoltà del docente chiedere di eseguire gli algoritmi implementati su dati forniti dal docente stesso. Nel caso questi dati siano memorizzati su file, questi saranno della medesima struttura dei dataset forniti e descritti nel testo dell'esercizio. I codici sviluppati dovranno consentire un rapido e semplice adattamento agli input forniti: ad esempio, **una buona implementazione consentirà di inserire in input il nome del file su cui eseguire il test**, mentre una peggiore richiederà di modificare il codice sorgente e una successiva compilazione a fronte della sola modifica del nome del file contenente il dataset.
+
+**Le consegne che non rispettano la complessità computazionale richiesta saranno considerate completamente invalide.**
 
 ## Esercizio 1 - Libreria per algoritmo di ordinamento ibrido QuickSort-SelectionSort
 
@@ -128,7 +129,7 @@ La ratio di una tale combinazione risiede nell'ipotesi che SelectionSort, pur av
 
 ### Ulteriori specifiche per l'implementazione:
 
-1. La libreria deve essere generica, nel senso che essa deve supportare l'ordinamento di array di un numero qualsiasi di elementi di tipo non noto a priori, tramite una funzione di comparazione;
+1. La libreria deve essere generica, nel senso che essa deve supportare l'ordinamento di array di un numero qualsiasi di elementi di tipo non noto a priori, tramite una funzione di comparazione.
 2. **QuickSort**: La strategia di partizionamento e la politica di scelta del pivot hanno un impatto significativo sulle prestazioni dell'algoritmo. La loro scelta è lasciata agli studenti, che dovranno saperla motivare.
 3. **SelectionSort**: implementare la versione classica O(n²).
 4. **Algoritmo ibrido**: L'algoritmo ibrido deve rispettare la soglia `k` in ogni fase della propria esecuzione e passare automaticamente da un algoritmo base all'altro durante la ricorsione.
@@ -156,16 +157,16 @@ Gli unit test devono coprire, in particolare:
 - Diversi valori della soglia `k`;
 - Casi limite, ad esempio, array già ordinati, ordinati inversamente, con elementi duplicati.
 
-### Condizioni per la consegna
+### Condizioni per la consegna:
 
 - Creare una sottocartella chiamata `ex1` all'interno del repository;
 - La consegna deve obbligatoriamente contenere un `Makefile` che con il comando `make all` produca all'interno di `ex1/bin` un file eseguibile chiamato `test_ex1`;
-- Se l'implementazione usa librerie esterne (come Unity per i test) includere anche queste per consentire la corretta compilazione;
+- Se l'implementazione usa librerie esterne (come Unity per i test), includere anche queste per consentire la corretta compilazione;
 - L'eseguibile `test_ex1` non deve richiedere parametri e deve eseguire tutti gli unit test automatizzati.
 
 ## Esercizio 2 - Libreria per Tavole hash (con concatenamento)
 
-Implementare, avvalendosi del supporto di un sistema basato su un Large Language Model, quale, ad esempio, ChatGPT (si veda sotto), una libreria generica che realizza la struttura dati *tavola hash (con concatenamento)* in grado di ospitare un insieme di coppie {<chiave_1,valore_1>,...,<chiave_n,valore_n>}, senza chiavi ripetute.
+Implementare una libreria generica che realizza la struttura dati *tavola hash (con concatenamento)* in grado di ospitare un insieme di coppie {<chiave_1,valore_1>,...,<chiave_n,valore_n>}, senza chiavi ripetute.
 
 ### Ulteriori specifiche per l'implementazione:
 
@@ -173,7 +174,7 @@ Implementare, avvalendosi del supporto di un sistema basato su un Large Language
 
 La struttura dati deve offrire almeno le seguenti funzionalità (ricavare il significato delle varie funzioni e procedure e dei loro parametri a partire dai loro prototipi e da quanto studiato nella parte di teoria del corso), per le quali è richiesta un'implementazione che rispetti le complessità computazionali tipiche di questo tipo di struttura dati:
 
-```
+```c
 HashTable* hash_table_create(int (*f1)(const void*,const void*), unsigned long (*f2)(const void*));
 void hash_table_put(HashTable*, const void*, const void*);
 void* hash_table_get(const HashTable*, const void*);
@@ -186,23 +187,13 @@ void hash_table_free(HashTable*);
 
 ### Unit Testing
 
-Implementare, avvalendosi del supporto di un sistema basato su un Large Language Model (LLM), quale, ad esempio, ChatGPT (si veda sotto), gli unit-test per la libreria secondo le indicazioni suggerite nel documento [Unit Testing](UnitTesting.md).
-
-### Uso di sistema basato su un Large Language Model
-
-Si richiede che per implementare quanto richiesto dal presente esercizio ci si avvalga del supporto di un sistema basato su un Large Language Model, quale, ad esempio, ChatGPT.
-
-È possibile che il processo di sviluppo risulti iterativo, comportando varie interazioni con il sistema LLM.
-
-**ATTENZIONE**: I Large Language Models talvolta forniscono implementazioni che non rispettano le specifiche dell'esercizio, in particolare ignorando la complessità computazionale richiesta per le strutture dati. **Le consegne che non rispettano la complessità computazionale specificata saranno considerate completamente invalide**. È responsabilità del gruppo studiare attentamente il codice generato, verificarne la correttezza algoritmica e assicurarsi che rispetti i vincoli richiesti.
-
-Serve quindi assumere un ruolo critico e di supervisione nel processo, non limitandosi ad accettare passivamente l'output del sistema LLM, ma analizzandolo, validandolo e, se necessario, richiedendo modifiche specifiche per garantire la conformità ai requisiti.
+Implementare gli unit test per la libreria secondo le indicazioni suggerite nel documento [Unit Testing](UnitTesting.md).
 
 ### Condizioni per la consegna:
 
 - Creare una sottocartella chiamata `ex2` all'interno del repository.
-- La consegna deve obbligatoriamente contenere un `Makefile`. Questo file con il comando `make all` deve produrre all'interno di `ex2/bin` un file eseguibile chiamato `test_ex2`;
-- Se l'implementazione usa librerie esterne (come Unity), includere anche queste per consentire la corretta compilazione;
+- La consegna deve obbligatoriamente contenere un `Makefile`. Questo file con il comando `make all` deve produrre all'interno di `ex2/bin` un file eseguibile chiamato `test_ex2`.
+- Se l'implementazione usa librerie esterne (come Unity), includere anche queste per consentire la corretta compilazione.
 - L'eseguibile `test_ex2` non deve richiedere nessun parametro e deve eseguire tutti gli unit test automatizzati prodotti.
 
 ## Esercizio 3 - Libreria Union-Find-Set per la gestione di insiemi dinamici disgiunti
@@ -212,32 +203,31 @@ Implementare una libreria generica che realizza la struttura dati *Union-Find-Se
 ### Ulteriori specifiche per l'implementazione:
 
 1. La libreria deve essere generica, nel senso che essa deve supportare la gestione di un numero qualsiasi di insiemi disgiunti, ciascuno con un numero qualsiasi di elementi di tipo non noto a priori;
-2. L'implementazione deve rappresentare la collezione di insiemi come una foresta di insiemi disgiunti
+2. L'implementazione deve rappresentare la collezione di insiemi come una foresta di insiemi disgiunti;
 3. L'implementazione deve adottare le due euristiche note come *unione per rango* e *compressione del cammino*, viste nella parte di teoria del corso;
-4. Le eventuali tavole hash usate nell'implementzione devono essere realizzate con la libreria implementata nell'Esercizio 2;
+4. Le eventuali tavole hash usate nell'implementazione devono essere realizzate con la libreria implementata nell'Esercizio 2;
 5. L'implementazione deve essere computazionalmente efficiente (in particolare, le scelte implementative non devono vanificare l'apporto all'efficienza delle due euristiche citate sopra).
 
 La struttura dati deve offrire almeno le seguenti funzionalità (ricavare il significato delle varie funzioni, procedure e dei loro parametri a partire dai loro prototipi e da quanto studiato nella parte di teoria del corso):
 
-```
+```c
 UnionFindSet* ufs_create(int (*f1)(const void*,const void*), unsigned long (*f2)(const void*));
 int ufs_make_set(UnionFindSet*,const void*);
 void* ufs_find_set(const UnionFindSet*,const void*);
 int ufs_union(UnionFindSet*,const void*,const void*);
-void ufs_free(UnionFindSet*):
+void ufs_free(UnionFindSet*);
 ```
 
 ### Unit Testing
 
-Implementare gli unit-test per la libreria secondo le indicazioni suggerite nel documento [Unit Testing](UnitTesting.md).
+Implementare gli unit test per la libreria secondo le indicazioni suggerite nel documento [Unit Testing](UnitTesting.md).
 
 ### Condizioni per la consegna:
 
 - Creare una sottocartella chiamata `ex3` all'interno del repository.
 - La consegna deve obbligatoriamente contenere un `Makefile`. Questo file con il comando `make all` deve produrre all'interno di `ex3/bin` un file eseguibile chiamato `test_ex3`.
-- Se l'implementazione usa librerie esterne (come Unity), includere anche queste per consentire la corretta compilazione;
+- Se l'implementazione usa librerie esterne (come Unity), includere anche queste per consentire la corretta compilazione.
 - L'eseguibile `test_ex3` non deve richiedere nessun parametro e deve eseguire tutti gli unit test automatizzati prodotti.
-
 
 ## Esercizio 4 - Libreria per Grafi sparsi e algoritmo di Kruskal
 
@@ -388,17 +378,17 @@ Libera la memoria allocata per il grafo.
 
 **Nota**: Le complessità contrassegnate con (*) assumono un'implementazione efficiente della tavola hash sottostante, e quando il grafo è veramente sparso, assumendo che l'operazione venga effettuata su un nodo la cui lista di adiacenza ha una lunghezza in O(1).
 
-La struttura ```struct graph``` deve essere decisa prendendo in considerazione la richiesta di usare la Tabella Hash dell'esercizio precedente.
+La struttura ```struct graph``` deve essere decisa prendendo in considerazione la richiesta di usare la Tavola Hash dell'Esercizio 2.
 
-*Suggerimento*:  un grafo non diretto può essere rappresentato usando un'implementazione per grafi diretti modificata
+*Suggerimento*: un grafo non diretto può essere rappresentato usando un'implementazione per grafi diretti modificata
 per garantire che, per ogni arco *(a,b)* etichettato *w*, presente nel grafo, sia presente nel grafo anche l'arco *(b,a)*
 etichettato *w*. Ovviamente, il grafo dovrà mantenere l'informazione che specifica se esso è un grafo diretto o non diretto.
 Similmente, un grafo non etichettato può essere rappresentato usando l'implementazione per grafi etichettati modificata per garantire
-che le etichette siano sempre `null` (che invece non devono mai essere `null` per i grafi etichettati).
+che le etichette siano sempre `NULL` (che invece non devono mai essere `NULL` per i grafi etichettati).
 
 ### Unit Testing
 
-Implementare gli unit-test per la libreria secondo le indicazioni suggerite nel documento [Unit Testing](UnitTesting.md).
+Implementare gli unit test per la libreria secondo le indicazioni suggerite nel documento [Unit Testing](UnitTesting.md).
 
 ### Uso della libreria che implementa la struttura dati Grafo
 
@@ -409,22 +399,23 @@ Graph kruskal(const Graph gr,
               int (*compare)(const void*, const void*),
               unsigned long (*hash)(const void*));
 ```
+
 #### Ulteriori specifiche per l'implementazione:
 
-1. L'algoritmo deve sfruttare la struttura dati Union-UnionFind-Set implementata nell'Esercizio 3;
+1. L'algoritmo deve sfruttare la struttura dati Union-Find-Set implementata nell'Esercizio 3;
 2. Come specificato dal prototipo, l'algoritmo deve restituire un tipo Graph, cioè il tipo della struttura dati implementata nella prima parte di questo esercizio (si ricordi che ogni foresta è un grafo).
 
 #### Unit Testing
 
-Implementare gli unit-test per l'algoritmo secondo le indicazioni suggerite nel documento [Unit Testing](UnitTesting.md).
+Implementare gli unit test per l'algoritmo secondo le indicazioni suggerite nel documento [Unit Testing](UnitTesting.md).
 
 ### Condizioni per la consegna:
 
 - Creare una sottocartella chiamata `ex4` all'interno del repository, che conterrà i file relativi a questo esercizio.
 - Includere nella consegna anche un `Makefile` che con il comando `make all` deve produrre all'interno di `ex4/bin` due file eseguibili chiamati `test_graph_ex4` e `test_kruskal_ex4`.
-- Se l'implementazione usa librerie esterne (come Unity), includere anche queste per consentire la corretta compilazione;
+- Se l'implementazione usa librerie esterne (come Unity), includere anche queste per consentire la corretta compilazione.
 - Gli eseguibili `test_graph_ex4` e `test_kruskal_ex4` non devono richiedere nessun parametro e devono eseguire tutti gli unit test automatizzati prodotti.
 
-## Esercizio 5 - Applicazione che usa le librerie implementate negli esercizi precedenti
+## Esercizio 5 - Pianificatore di percorsi tra località italiane
 
-TBD TBD TBD
+**Testo provvisorio**: la specifica di questo esercizio sarà aggiornata.
