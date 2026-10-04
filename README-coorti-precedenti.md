@@ -7,9 +7,10 @@ Per tutto ciò che non è indicato qui vale quanto riportato nel documento [READ
 
 Valgono le regole d'esame, la validità del progetto di laboratorio e le regole su gruppi e turni riportate in [README.md](README.md), con le seguenti precisazioni:
 
-- i correttori automatici messi a disposizione sulla pagina Moodle riguardano gli Esercizi 1 e 2: il superamento di tutti i loro test resta condizione per poter sostenere la prova scritta;
-- gli Esercizi 3 e 4 devono essere consegnati mediante GitLab entro la data della prova scritta, come il resto del progetto, e sono verificati durante la prova orale;
-- la presente specifica non prevede l'Esercizio 5.
+- gli esercizi 1 e 2 sono i medesimi delle coorti più recenti, e usano quindi gli stessi correttori sulla pagina Moodle;
+- invece, per gli esercizi 3 e 4 in Java viene fornito un correttore separato sulla pagina Moodle;
+- la presente specifica non prevede un Esercizio 5 aggiuntivo, ma va comunque consegnato il progetto complessivo tramite la stessa attività dell'esercizio 5;
+- la consegna e il superamento di tutti i test resta condizione necessaria per poter sostenere la prova scritta.
 
 # Indicazioni generali e suggerimenti
 
