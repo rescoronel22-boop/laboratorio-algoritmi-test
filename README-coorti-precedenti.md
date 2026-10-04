@@ -170,100 +170,136 @@ Scrivere un programma che utilizza la tavola hash implementata per calcolare la 
 $ ./main_ex2 /tmp/data/iliade.txt 6
 ```
 
-# ATTENZIONE: da qui in poi la specifica non è definitiva e POTREBBE CAMBIARE
-
-## Esercizio 3 - Libreria Union-Find-Set per la gestione di insiemi dinamici disgiunti
+## Esercizio 3 - PriorityQueue
 
 ### Linguaggio richiesto: Java
 
-Implementare una libreria generica che realizza la struttura dati *Union-Find-Set* per la gestione di insiemi dinamici disgiunti.
+### Testo
 
-### Ulteriori specifiche per l'implementazione:
+Si implementi la struttura dati *coda con priorità (PriorityQueue)*.
 
-1. La libreria deve essere generica, nel senso che essa deve supportare la gestione di un numero qualsiasi di insiemi disgiunti, ciascuno con un numero qualsiasi di elementi di tipo non noto a priori; la struttura dati non deve prevedere un insieme iniziale finito di elementi;
-2. L'implementazione deve rappresentare la collezione di insiemi come una foresta di insiemi disgiunti;
-3. L'implementazione deve adottare le due euristiche note come *unione per rango* e *compressione del cammino*, viste nella parte di teoria del corso;
-4. Le eventuali tavole hash usate nell'implementazione possono essere quelle della libreria standard di Java (ad esempio `java.util.HashMap`);
-5. L'implementazione deve essere computazionalmente efficiente (in particolare, le scelte implementative non devono vanificare l'apporto all'efficienza delle due euristiche citate sopra).
+La struttura dati deve gestire tipi generici e consentire un numero qualunque e non noto a priori di elementi, implementando la seguente interfaccia (con requisiti minimi di complessità):
 
-La struttura dati deve offrire almeno le seguenti operazioni (ricavarne il significato da quanto studiato nella parte di teoria del corso); nomi e firme dei metodi e organizzazione in classi sono lasciati agli studenti:
+```
+public interface AbstractQueue<E> {
+  public boolean empty(); // controlla se la coda è vuota -- O(1)
+  public boolean push(E e); // aggiunge un elemento alla coda -- O(logN)
+  public boolean contains(E e); // controlla se un elemento è in coda -- O(1)
+  public E top(); // accede all'elemento in cima alla coda -- O(1)
+  public void pop(); // rimuove l'elemento in cima alla coda -- O(logN)
+  public boolean remove(E e); // rimuove un elemento se presente in coda -- O(logN)
+};
+```
 
-- creazione di una collezione vuota di insiemi disgiunti;
-- *make-set*: creazione di un insieme contenente un solo elemento dato;
-- *find-set*: determinazione del rappresentante dell'insieme che contiene un elemento dato;
-- *union*: unione degli insiemi che contengono due elementi dati.
+*Suggerimento*: per implementare i metodi `contains` e `remove` potrebbe essere necessario usare una struttura dati di appoggio oltre allo heap (è ammesso usare strutture dati dalla libreria standard di Java se necessario).
+
+La classe concreta `PriorityQueue<E>` che implementa l'interfaccia dovrebbe avere almeno un costruttore che crea una coda vuota e prende come argomento un `Comparator<E>` da usare per confrontare gli elementi:
+
+```
+PriorityQueue(Comparator<E> comparator)
+```
+
+_Nota_: `Comparator` è un'[interfaccia base](https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/util/Comparator.html) di Java.
 
 ### Unit Testing
 
-Implementare gli unit test per la libreria con JUnit, secondo le indicazioni suggerite nel documento [Unit Testing](UnitTesting.md).
+Implementare gli unit-test degli algoritmi secondo le indicazioni suggerite nel documento [Unit Testing](UnitTesting.md).
 
 ### Condizioni per la consegna:
 
-- Creare una sottocartella chiamata `ex3` all'interno del repository.
-- La consegna deve consentire di compilare il codice e di eseguire tutti gli unit test da riga di comando, senza l'uso di un ambiente di sviluppo integrato. I comandi necessari, oppure un `Makefile` o uno script che li esegue, devono far parte della consegna.
-- Se l'implementazione usa librerie esterne (come JUnit), includere anche i relativi file `.jar` per consentire la corretta compilazione.
+- Creare una sottocartella chiamata `ex3-4` all'interno del repository, che conterrà tutte le classi relative a questo esercizio e al seguente, compresi i file di progetto relativi all'IDE Java che avete utilizzato.
+- Includete nella consegna anche un `Makefile` che con il comando `make all` produca i file `.class` eseguibili relativi a tutte le classi implementate. Includete anche tutti i file `.jar` (come junit) necessari alla compilazione.
 
-## Esercizio 4 - Libreria per Grafi sparsi e algoritmo di Kruskal
+## Esercizio 4 - Grafi sparsi e foreste ricoprenti minime
 
 ### Linguaggio richiesto: Java
 
-Implementare una libreria generica che realizza la struttura dati *Grafo* in modo che sia ottimale per dati sparsi (**attenzione**: le scelte implementative dovranno essere giustificate in relazione alle nozioni presentate durante le lezioni in aula).
+### Testo
 
-### Ulteriori specifiche per l'implementazione:
+Si implementi una libreria che realizza la struttura dati *Grafo* in modo che sia ottimale per dati sparsi
+(**attenzione**: le scelte implementative che farete dovranno essere giustificate in relazione alle nozioni presentate
+durante le lezioni in aula).
 
-1. L'implementazione deve essere generica, nel senso che essa deve consentire la gestione di grafi con un numero qualsiasi di nodi e di archi, in cui i tipi dei nodi e delle etichette degli archi non sono noti a priori;
-2. La struttura dati deve consentire di rappresentare grafi diretti e grafi non diretti, etichettati e non etichettati;
-3. Le eventuali tavole hash usate nell'implementazione possono essere quelle della libreria standard di Java (ad esempio `java.util.HashMap`).
+L'implementazione deve essere generica sia per quanto riguarda il tipo dei nodi, sia per quanto riguarda le etichette
+degli archi, implementando la seguente interfaccia (con requisiti minimi di complessità; dove _N_ può indicare il numero di nodi o il numero di archi, a seconda del contesto):
 
-La struttura dati deve offrire almeno le seguenti operazioni; accanto a ogni operazione è indicata la complessità richiesta, dove _N_ può indicare il numero di nodi o il numero di archi, a seconda del contesto. Nomi e firme dei metodi e organizzazione in classi sono lasciati agli studenti.
+```
+public interface AbstractGraph<V,L> {
+  public boolean isDirected(); // dice se il grafo è diretto o meno -- O(1)
+  public boolean isLabelled(); // dice se il grafo è etichettato o meno -- O(1)
+  public boolean addNode(V a); // aggiunge un nodo -- O(1)
+  public boolean addEdge(V a, V b, L l); // aggiunge un arco dati estremi ed etichetta -- O(1) (*)
+  public boolean containsNode(V a); // controlla se un nodo è nel grafo -- O(1)
+  public boolean containsEdge(V a, V b); // controlla se un arco è nel grafo -- O(1) (*)
+  public boolean removeNode(V a); // rimuove un nodo dal grafo -- O(N)
+  public boolean removeEdge(V a, V b); // rimuove un arco dal grafo -- O(1) (*)
+  public int numNodes(); // numero di nodi -- O(1)
+  public int numEdges(); // numero di archi -- O(N)
+  public Collection<V> getNodes(); // recupero dei nodi del grafo -- O(N)
+  public Collection<? extends AbstractEdge<V,L>> getEdges(); // recupero degli archi del grafo -- O(N)
+  public Collection<V> getNeighbours(V a); // recupero dei nodi adiacenti ad un dato nodo -- O(1) (*)
+  public L getLabel(V a, V b); // recupero dell'etichetta di un arco -- O(1) (*)
+};
+```
 
-- Creazione di un grafo vuoto, diretto o non diretto, etichettato o non etichettato – O(1)
-- Verifica se il grafo è diretto – O(1)
-- Verifica se il grafo è etichettato – O(1)
-- Aggiunta di un nodo – O(1)
-- Verifica se il grafo contiene un dato nodo – O(1)
-- Cancellazione di un nodo – O(N)
-- Determinazione del numero di nodi – O(1)
-- Recupero dei nodi del grafo – O(N)
-- Aggiunta di un arco, dati gli estremi e l'etichetta – O(1) (*)
-- Verifica se il grafo contiene un dato arco – O(1) (*)
-- Cancellazione di un arco – O(1) (*)
-- Determinazione del numero di archi – O(N)
-- Recupero degli archi del grafo – O(N)
-- Recupero dell'etichetta associata a una coppia di nodi – O(1) (*)
-- Recupero dei nodi adiacenti a un dato nodo – O(1) (*)
-- Determinazione del numero di nodi adiacenti a un dato nodo – O(1)
+_(*)_ quando il grafo è veramente sparso, assumendo che l'operazione venga effettuata su un nodo la cui lista di adiacenza ha una lunghezza in O(1).
 
-**Nota**: le complessità contrassegnate con (*) valgono quando il grafo è veramente sparso, assumendo che l'operazione venga effettuata su un nodo la cui lista di adiacenza ha una lunghezza in O(1).
+_Nota_: `AbstractCollection` è un'[interfaccia base](https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/util/AbstractCollection.html) di Java.
 
-*Suggerimento*: un grafo non diretto può essere rappresentato usando un'implementazione per grafi diretti modificata per garantire che, per ogni arco *(a,b)* etichettato *w* presente nel grafo, sia presente nel grafo anche l'arco *(b,a)* etichettato *w*. Il grafo dovrà mantenere l'informazione che specifica se esso è un grafo diretto o non diretto.
+L'interfaccia `AbstractGraph` si basa sulla seguente interfaccia per la rappresentazione di un arco:
+
+```
+public interface AbstractEdge<V,L> {
+  public V getStart(); // il nodo di partenza dell'arco
+  public V getEnd(); // il nodo di arrivo dell'arco
+  public L getLabel(); // l'etichetta dell'arco
+};
+```
+
+La classe concreta `Graph<V,L>` che implementa l'interfaccia `AbstractGraph` dovrebbe avere almeno un costruttore che crea un grafo vuoto in complessità O(1) e prende come argomenti due valori booleani per impostare se il grafo è da considerarsi diretto o meno, e se è da considerarsi etichettato o meno:
+
+```
+Graph(boolean directed, boolean labelled)
+```
+
+A seconda del valore di questi due parametri, cambierà il comportamento dei metodi per gestire gli archi per tutte le operazioni successive.
+
+*Suggerimento*:  un grafo non diretto può essere rappresentato usando un'implementazione per grafi diretti modificata
+per garantire che, per ogni arco *(a,b)* etichettato *w*, presente nel grafo, sia presente nel grafo anche l'arco *(b,a)*
+etichettato *w*. Ovviamente, il grafo dovrà mantenere l'informazione che specifica se esso è un grafo diretto o non diretto.
+Similmente, un grafo non etichettato può essere rappresentato usando l'implementazione per grafi etichettati modificata per garantire
+che le etichette siano sempre `null` (che invece non devono mai essere `null` per i grafi etichettati).
 
 ### Unit Testing
 
-Implementare gli unit test per la libreria con JUnit, secondo le indicazioni suggerite nel documento [Unit Testing](UnitTesting.md).
+Implementare gli unit-test degli algoritmi secondo le indicazioni suggerite nel documento [Unit Testing](UnitTesting.md).
 
 ### Uso della libreria che implementa la struttura dati Grafo
 
-Si implementi l'*algoritmo di Kruskal* per il calcolo di una minima foresta ricoprente di un grafo non diretto e pesato (non necessariamente connesso).
+Si implementi l'algoritmo di Prim per la determinazione della minima foresta ricoprente di un grafo, secondo il seguente template:
 
-#### Ulteriori specifiche per l'implementazione:
+```
+public class Prim {
+  public static <V, L extends Number> Collection<? extends AbstractEdge<V, L>> minimumSpanningForest(Graph<V, L> graph) {
+    // calcola la minima foresta ricoprente con l'algoritmo di Prim
+    // restituisce la collezione degli archi che formano la foresta
+  }
+  public static void main(String[] args) {
+    // leggi i dati CSV del grafo dal percorso in args[1]
+    // calcola la minima foresta ricoprente con minimumSpanningForest
+    // scrivi su standard output solo la descrizione della foresta calcolata come CSV con formato analogo a quello in input
+    // su standard error si possono scrivere ulteriori informazioni, come il numero di nodi e archi nella foresta calcolata,
+    // o il peso totale della foresta
+  }
+}
+```
 
-1. L'algoritmo deve sfruttare la struttura dati Union-Find-Set implementata nell'Esercizio 3;
-2. L'algoritmo deve restituire un grafo, cioè un'istanza della struttura dati implementata nella prima parte di questo esercizio (si ricordi che ogni foresta è un grafo): un albero se il grafo dato è connesso, altrimenti una foresta costituita dai minimi alberi ricoprenti di ciascuna componente connessa.
-
-#### Unit Testing
-
-Implementare gli unit test per l'algoritmo con JUnit, secondo le indicazioni suggerite nel documento [Unit Testing](UnitTesting.md).
-
-### Uso delle librerie che implementano la struttura dati Grafo e l'algoritmo di Kruskal
-
-Si implementi un'applicazione che legge il file `italian_dist_graph.csv`, costruisce il grafo corrispondente, ne calcola una minima foresta ricoprente con l'algoritmo di Kruskal e stampa il numero di nodi, il numero di archi e il peso complessivo (in km) della foresta ottenuta.
-
-Il file `italian_dist_graph.csv`, che potete recuperare (compresso) all'indirizzo:
+L'implementazione dell'algoritmo di Prim dovrà utilizzare la struttura dati *PriorityQueue* implementata nell'esercizio precedente e la struttura dati grafo appena implementata.
+La struttura dati e l'algoritmo di Prim dovranno poi essere utilizzati con i dati contenuti nel file `italian_dist_graph.csv`, che potete recuperare all'indirizzo:
 
 > [https://datacloud.di.unito.it/index.php/s/FqneW99EGWLSRpY](https://datacloud.di.unito.it/index.php/s/FqneW99EGWLSRpY)
 
-contiene le distanze in metri tra varie località italiane e una frazione delle località a loro più vicine. Il formato è un CSV standard: i campi sono separati da virgole; i record sono separati dal carattere di fine riga (`\n`).
+Tale file contiene le distanze in metri tra varie località italiane e una frazione delle località a loro più vicine. Il formato è un CSV standard: i campi sono separati da virgole; i record sono separati dal carattere di fine riga (`\n`).
 
 Ogni record contiene i seguenti dati:
 
@@ -273,16 +309,14 @@ Ogni record contiene i seguenti dati:
 
 **Note:**
 
-- Le informazioni presenti nelle righe del file vanno interpretate come archi **non diretti**.
+- Nel caso in cui il grafo sia costituito da una sola componente connessa, l'algoritmo restituirà un albero. Nel caso in cui, invece, vi siano più componenti connesse, l'algoritmo restituirà una foresta costituita dai minimi alberi ricoprenti di ciascuna componente connessa.
+- Potete intrepretare le informazioni presenti nelle righe del file come archi **non diretti** (per cui probabilmente vorrete inserire nel vostro grafo sia l'arco di andata che quello di ritorno a fronte di ogni riga letta).
 - Il file è stato creato a partire da un dataset poco accurato. I dati riportati contengono inesattezze e imprecisioni.
+- Un'implementazione corretta dell'algoritmo di Prim, eseguita sui dati contenuti nel file `italian_dist_graph.csv`, dovrebbe determinare una minima foresta ricoprente con 18.640 nodi, 18.637 archi (non orientati) e di peso complessivo di circa 89.939,913 Km.
 
 **Si ricorda che il file `italian_dist_graph.csv` (e i file compilati) NON DEVONO ESSERE OGGETTO DI COMMIT SU GIT!**
 
-**Controlli**: un'implementazione corretta dell'algoritmo di Kruskal, eseguita sui dati contenuti nel file `italian_dist_graph.csv`, determina una minima foresta ricoprente con 18.640 nodi, 18.637 archi (non orientati) e di peso complessivo di circa 89.939,913 km.
-
 ### Condizioni per la consegna:
 
-- Creare una sottocartella chiamata `ex4` all'interno del repository, che conterrà i file relativi a questo esercizio.
-- La consegna deve consentire di compilare il codice, di eseguire tutti gli unit test e di eseguire l'applicazione da riga di comando, senza l'uso di un ambiente di sviluppo integrato. I comandi necessari, oppure un `Makefile` o uno script che li esegue, devono far parte della consegna.
-- Se l'implementazione usa librerie esterne (come JUnit), includere anche i relativi file `.jar` per consentire la corretta compilazione.
-- L'applicazione deve ricevere il percorso del file `italian_dist_graph.csv` come argomento da riga di comando; il nome del file non deve essere scritto nel codice.
+- Creare una sottocartella chiamata `ex3-4` all'interno del repository, che conterrà tutte le classi relative a questo esercizio e al precedente, compresi i file di progetto relativi all'IDE Java che avete utilizzato.
+- Includete nella consegna anche un `Makefile` che con il comando `make all` produca i file `.class` eseguibili relativi a tutte le classi implementate. Includete anche tutti i file `.jar` (come junit) necessari alla compilazione.
