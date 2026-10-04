@@ -19,11 +19,11 @@
 
 **Q: Sono uno/a studente/ssa assegnato/a al turno X posso spostarmi al turno Y?**
 
-**A**: Si veda quanto riportato nel README.
+**A**: No, ma si possono formare gruppi anche tra studenti di turni diversi, e frequentare in altri turni dando la precedenza agli studenti del turno se la capienza dell'aula fosse superata.
 
-**Q: Sono uno/a studente/ssa che ha già preparato il laboratorio dell'anno accademico 2024/2025. Posso sostenere la prova di laboratorio discutendo gli esercizi di quell'a.a.?**
+**Q: Sono uno/a studente/ssa che ha già preparato il laboratorio dell'anno accademico 2025/2026. Posso sostenere la prova di laboratorio discutendo gli esercizi di quell'a.a.?**
 
-**A**: Si veda quanto riportato nel README.
+**A**: No.
 
 **Q: Sono uno/a studente/ssa del turno X vorrei lavorare in gruppo con uno/a studente/ssa del turno Y. Posso farlo?**
 

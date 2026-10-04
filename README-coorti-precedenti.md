@@ -1,6 +1,7 @@
 # Laboratorio per il corso di Algoritmi e Strutture Dati: specifica per studenti e studentesse di anni precedenti il 2024/2025 (esercizi in C e in Java)
 
-Questo documento descrive la variante del progetto di laboratorio con due esercizi in C e due esercizi in Java. Per tutto ciò che non è indicato qui vale quanto riportato nel documento [README.md](README.md).
+Questo documento descrive la variante del progetto di laboratorio con due esercizi in C e due esercizi in Java, che possono seguire **solo gli studenti e studentesse iscritti/e al secondo anno in un anno accademico fino al 2023/2024.**
+Per tutto ciò che non è indicato qui vale quanto riportato nel documento [README.md](README.md).
 
 # Regole d'esame
 
@@ -168,6 +169,8 @@ Scrivere un programma che utilizza la tavola hash implementata per calcolare la 
 ```
 $ ./main_ex2 /tmp/data/iliade.txt 6
 ```
+
+# ATTENZIONE: da qui in poi la specifica non è definitiva e POTREBBE CAMBIARE
 
 ## Esercizio 3 - Libreria Union-Find-Set per la gestione di insiemi dinamici disgiunti
 

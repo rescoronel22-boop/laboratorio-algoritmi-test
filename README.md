@@ -4,7 +4,7 @@
 
 ## Studenti e studentesse di anni precedenti il 2024/2025
 
-Gli studenti e le studentesse iscritti/e al secondo anno in un anno accademico precedente il 2024/2025 **possono** svolgere tutti gli esercizi di laboratorio interamente in C (come indicato nella presente specifica), oppure svolgere quattro esercizi, i primi due in C e gli ultimi due in Java, come indicato nel documento [README-coorti-precedenti.md](README-coorti-precedenti.md).
+Gli studenti e le studentesse iscritti/e al secondo anno in un anno accademico fino al 2023/2024 **possono** (e gli è consigliato) svolgere tutti gli esercizi di laboratorio interamente in C (come indicato nella presente specifica), oppure possono anche svolgere quattro esercizi, i primi due in C e gli ultimi due in Java, come indicato nel documento [README-coorti-precedenti.md](README-coorti-precedenti.md). Tutti gli altri studenti devono necessariamente seguire le indicazioni di questo documento.
 
 ## Studenti e studentesse con Algoritmi non di 9 CFU
 
@@ -22,17 +22,18 @@ In caso di necessità e compatibilmente con i posti disponibili nelle aule, è p
 
 ## Modalità d'esame
 
-Come specificato nella descrizione ufficiale dell'insegnamento (https://laurea.informatica.unito.it/do/corsi.pl/Show?_id=iw3r), l'esame di _Algoritmi e Strutture Dati_ consiste in una prova scritta, somministrata mediante la piattaforma Esami, ed in una seguente discussione orale del progetto di laboratorio.
+Come specificato nella [descrizione ufficiale dell'insegnamento](https://laurea.informatica.unito.it/do/corsi.pl/Show?_id=iw3r), l'esame di _Algoritmi e Strutture Dati_ consiste in una prova scritta, somministrata mediante la piattaforma Esami, ed in una seguente discussione orale del progetto di laboratorio.
 
 **Per poter sostenere la prova scritta**, tutti i membri di un gruppo di laboratorio devono, entro la data dello scritto che intendono sostenere:
 - sottoporre il codice del progetto di laboratorio a tutti i correttori automatici messi a disposizione sulla pagina Moodle del Laboratorio di ASD, **superandone tutti i test.** Un laboratorio il cui codice non dovesse superare qualche test (anche solo uno per un unico esercizio) o che mancasse di qualche esercizio (anche se altri membri del gruppo l'avessero consegnato) non consente di sostenere lo scritto;
-- consegnare l'intero progetto di laboratorio (completo e senza la necessità di ulteriori commit dopo la data della prova scritta) mediante GitLab (vedi sotto);
-- compilare il questionario su Moodle (in cui indicare la composizione dei gruppi, l'URL del repository GitLab, ...).
+- consegnare l'intero progetto di laboratorio (completo e senza la necessità di ulteriori commit dopo la data della prova scritta) mediante GitLab (vedi sotto) e compilando il relativo questionario su Moodle (in cui indicare la composizione dei gruppi e l'URL del repository GitLab).
 
 **Per poter sostenere la prova orale**, ogni studente/studentessa deve:
 - aver ottenuto la sufficienza nella prova scritta;
 - essersi iscritto/a all'appello tramite il sistema di Ateneo Esse3;
-- essersi prenotato/a (scegliendo data e ora tra quelle proposte) tramite un calendario messo a disposizione dal/la docente del proprio turno in un momento successivo alla pubblicazione degli esiti della prova scritta. [Si tenga presente che, per ogni appello, le prove orali possono iniziare soltanto dopo la pubblicazione degli esiti della prova scritta, pertanto **è possibile (e probabile) che esse non si tengano nella data e ora ufficiale specificate sul sistema di Ateneo Esse3 e, inoltre, che esse proseguano per più giornate**].
+- essersi prenotato/a (scegliendo data e ora tra quelle proposte) tramite un calendario messo a disposizione dal/la docente del proprio turno in un momento successivo alla pubblicazione degli esiti della prova scritta. 
+
+Si tenga presente che, per ogni appello, le prove orali possono iniziare soltanto dopo la pubblicazione degli esiti della prova scritta, pertanto **è possibile (e probabile) che esse non si tengano nella data e ora ufficiale specificate sul sistema di Ateneo Esse3 e, inoltre, che esse proseguano per più giornate**.
 
 La prova orale deve essere sostenuta **nella medesima sessione della prova scritta superata** (si ricorda che le sessioni sono gennaio-febbraio 2027, giugno-luglio 2027, settembre 2027). Si noti che, per quelle sessioni per cui sono previsti due appelli, esisteranno due possibilità per sostenere la prova orale (primo o secondo appello della sessione); per le sessioni in cui è previsto un solo appello, la prova orale deve essere effettuata necessariamente in quell'appello. Nel caso in cui l'orale non venga superato entro i termini della sessione, lo scritto dovrà essere ripetuto.
 
@@ -81,10 +82,6 @@ Come indicato sotto, alcuni esercizi chiedono di implementare **codice generico*
 
 **Esempio:** l'uso di una libreria C che implementa array dinamici è consentito, solo se nessun esercizio chiede la realizzazione di un array dinamico.
 
-## Relazione sugli esercizi
-
-La relazione, per quegli esercizi che la richiedono, deve essere inserita in formato _Markdown_ nel file README.md del progetto, divenendo così parte integrante della documentazione.
-
 ## Unit Testing
 
 Come indicato esplicitamente nei testi degli esercizi, il progetto di laboratorio comprende obbligatoriamente la definizione di opportune suite di unit test.
@@ -103,7 +100,7 @@ Per "buona qualità" intendiamo codice ben organizzato, ben modularizzato, ben c
 
 - **Importante**: Gli esercizi richiedono (fra le altre cose) di sviluppare codice generico. Nello sviluppare questa parte, si deve assumere di stare sviluppando una libreria generica intesa come fondamento di futuri programmi. Non è pertanto lecito fare assunzioni semplificative; in generale, l'implementazione della libreria generica deve restare separata e non deve essere influenzata in alcun modo dagli usi di essa eventualmente richiesti negli esercizi (ad esempio, se un esercizio dovesse richiedere l'implementazione della struttura dati grafo e quello stesso o un altro esercizio dovesse richiedere l'implementazione, a partire da tale struttura dati, di un algoritmo per il calcolo delle componenti connesse di un grafo, l'implementazione della struttura dati dovrebbe essere separata dall'algoritmo per il calcolo delle componenti connesse e *non* dovrebbe contenere elementi – variabili, procedure, funzioni, definizioni di tipo, ecc. – eventualmente utili a tale algoritmo, ma non essenziali alla struttura dati; analogamente, se un esercizio dovesse richiedere di operare su grafi con nodi di tipo stringa, l'implementazione della struttura dati grafo dovrebbe restare generica e non potrebbe quindi assumere per i nodi il solo tipo stringa).
 - verificare che il codice sia suddiviso correttamente in moduli distinti;
-- aggiungere un commento, prima di una definizione, che spieghi il funzionamento dell'oggetto definito, meglio se in formato [doxygen](https://www.doxygen.nl). Evitare quando possibile di commentare direttamente il codice interno alle funzioni/procedure implementate (se il codice è ben scritto, tali commenti in genere non servono);
+- aggiungere un commento, prima di una definizione, che spieghi il funzionamento dell'oggetto definito, possibilmente in formato [doxygen](https://www.doxygen.nl). Evitare quando possibile di commentare direttamente il codice interno alle funzioni/procedure implementate (se il codice è ben scritto, tali commenti in genere non servono);
 - la lunghezza di una funzione/procedura è in genere un campanello di allarme: se essa cresce troppo, probabilmente è necessario rifattorizzare il codice spezzando la funzione in più parti. In linea di massima si può consigliare di intervenire quando la funzione cresce sopra le 30 righe (considerando anche commenti e spazi bianchi);
 - sono accettabili commenti in italiano, sebbene siano preferibili in inglese;
 - tutti i nomi (es., nomi di variabili, di funzioni, di tipi, ecc.) *devono* essere significativi e in inglese;
@@ -170,7 +167,7 @@ Implementare una libreria generica che realizza la struttura dati *tavola hash (
 
 ### Ulteriori specifiche per l'implementazione:
 
-1. La libreria deve essere generica, nel senso che deve consentire tavole hash con un numero qualsiasi di coppie <chiave,valore>, in cui i tipi di chiavi e valori non sono noti a priori (si tenga presente che tutte le chiavi devono avere uno stesso tipo, tutti i valori devono avere uno stesso tipo, ma chiavi e valori possono avere tipi fra loro differenti).
+La libreria deve essere generica, nel senso che deve consentire tavole hash con un numero qualsiasi di coppie <chiave,valore>, in cui i tipi di chiavi e valori non sono noti a priori (si tenga presente che tutte le chiavi devono avere uno stesso tipo, tutti i valori devono avere uno stesso tipo, ma chiavi e valori possono avere tipi fra loro differenti).
 
 La struttura dati deve offrire almeno le seguenti funzionalità (ricavare il significato delle varie funzioni e procedure e dei loro parametri a partire dai loro prototipi e da quanto studiato nella parte di teoria del corso), per le quali è richiesta un'implementazione che rispetti le complessità computazionali tipiche di questo tipo di struttura dati:
 
@@ -195,6 +192,8 @@ Implementare gli unit test per la libreria secondo le indicazioni suggerite nel 
 - La consegna deve obbligatoriamente contenere un `Makefile`. Questo file con il comando `make all` deve produrre all'interno di `ex2/bin` un file eseguibile chiamato `test_ex2`.
 - Se l'implementazione usa librerie esterne (come Unity), includere anche queste per consentire la corretta compilazione.
 - L'eseguibile `test_ex2` non deve richiedere nessun parametro e deve eseguire tutti gli unit test automatizzati prodotti.
+
+# ATTENZIONE: da qui in poi la specifica non è definitiva e POTREBBE CAMBIARE
 
 ## Esercizio 3 - Libreria Union-Find-Set per la gestione di insiemi dinamici disgiunti
 
@@ -418,4 +417,4 @@ Implementare gli unit test per l'algoritmo secondo le indicazioni suggerite nel 
 
 ## Esercizio 5 - Pianificatore di percorsi tra località italiane
 
-**Testo provvisorio**: la specifica di questo esercizio sarà aggiornata.
+**Testo provvisorio**: la specifica di questo esercizio è ancora da completare.
