@@ -187,6 +187,11 @@ Passo 1: effettuare un pull del progetto dei docenti utilizzando il seguente
 git pull git@gitlab2.educ.di.unito.it:magro/laboratorio-algoritmi-2026-2027.git main
 ```
 
+Il branch principale del repository dei docenti, creato su GitLab, si chiama
+`main`, e lo stesso nome si ritrova nei fork e nelle loro copie locali. Un
+repository creato con `git init` ha invece come primo branch `master`, il nome
+predefinito di Git, usato negli esempi delle sezioni seguenti.
+
 Passo 2: effettuare il push della propria versione locale sul proprio repository
          GitLab:
 
@@ -202,12 +207,12 @@ quanto sviluppato in due branch distinti.
 
 L'utilizzo di branch è molto utile per diverse ragioni, ad esempio:
 - permette di non interferire con il lavoro dei colleghi; fino a quando non
-  effettuerò il merge delle mie modifiche sul branch "main" gli altri colleghi
+  effettuerò il merge delle mie modifiche sul branch "master" gli altri colleghi
   potranno continuare a lavorare come se io non avessi modificato nulla;
 - permette di lavorare in modo più "atomico", la linea di sviluppo principale
   viene aggiornata solo quando una feature è pronta per essere integrata;
 - permette di organizzare meglio il lavoro; ad esempio molti progetti mantengono
-  un branch "stabile" (di solito chiamato main), uno di sviluppo e uno per
+  un branch "stabile" (di solito chiamato master), uno di sviluppo e uno per
   le idee che si vogliono esplorare.
 
 Prima di vedere i comandi per creare e modificare i branch è utile capire che
@@ -232,7 +237,7 @@ produce un output simile al seguente:
 
 ```
 * branching
-  main
+  master
   unity_tests
 ```
 
@@ -252,20 +257,20 @@ Come menzionato, per lavorare su un particolare branch si usa il comando
 "checkout" seguito dal nome del branch che si vuole attivare. Ad esempio:
 
 ```
-$ git checkout main
+$ git checkout master
 ```
 
-attiva il branch 'main' e produce un output simile a quanto segue:
+attiva il branch 'master' e produce un output simile a quanto segue:
 
 ```
 M	Git.md
-Switched to branch 'main'
-Your branch is up-to-date with 'origin/main'.
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
 ```
 
 il messaggio ci informa che il checkout ha avuto successo e che però il file
 `Git.md` era stato modificato ed è stato pertanto copiato nella working
-directory in sostituzione di quello salvato nel branch main. Questo
+directory in sostituzione di quello salvato nel branch master. Questo
 comportamento è utile nei casi si inizi a lavorare su un particolare branch e
 ci si accorga strada facendo che le modifiche sono più sostanziose di quanto
 preventivato e che il lavoro merita di proseguire su un branch apposito. In
@@ -275,13 +280,13 @@ con tutte le modifiche già pronte per essere aggiunte al prossimo commit.
  Volendo controllare che il checkout abbia avuto successo, potremmo usare
  nuovamente `git branch` per vedere lo stato dei vari branch. Procedendo con
  questa operazione otterremo il seguente risultato (l'asterisco accanto al
- branch main indica che, correttamente, il branch attivo non è più
+ branch master indica che, correttamente, il branch attivo non è più
  `branching`):
 
 
 ```
 branching
-* main
+* master
 unity_tests
 ```
 
@@ -295,13 +300,13 @@ usati per mostrare le biforcazioni nella storia del progetto). Sul
 nostro repository di prova il comando restituisce il seguente output:
 
 ```
-* bbcbc23 (HEAD -> main) commit 2
+* bbcbc23 (HEAD -> master) commit 2
 * 59b95df commit 1
 * 4f49020 initial commit
 ```
 
-L'output mostra che sono stati effettuati tre commit, che il branch main punta
-a "commit 2" e che la HEAD è agganciata al branch main. Le stringhe di lettere
+L'output mostra che sono stati effettuati tre commit, che il branch master punta
+a "commit 2" e che la HEAD è agganciata al branch master. Le stringhe di lettere
 e numeri accanto alle descrizioni contengono i primi otto caratteri della firma
 sha1 dei commit: in Git ogni commit è identificato dalla sua firma sha1, è
 possibile effettuare il checkout di un particolare commit indicando tale sigla,
@@ -317,7 +322,7 @@ Effettuiamo un commit ottenendo la seguente situazione:
 
 ```
 * f252716 (HEAD -> feature1) commit 3
-* bbcbc23 (main) commit 2
+* bbcbc23 (master) commit 2
 * 59b95df commit 1
 * 4f49020 initial commit
 ```
@@ -326,18 +331,18 @@ Effettuiamo un commit ottenendo la seguente situazione:
 dei comandi `git branch feature1` (crea il branch `feature1`) e `git checkout
 feature1`.
 
-In questo momento il branch main non ha subito ulteriori commit e perciò è
+In questo momento il branch master non ha subito ulteriori commit e perciò è
 collegato in linea diretta con il branch 'feature1'. Nel caso volessimo
-effettuare il merge di main e feature1 Git semplicemente sposterebbe il
-puntatore 'main' in modo da farlo puntare al 'commit 3'. Si dice in questo
+effettuare il merge di master e feature1 Git semplicemente sposterebbe il
+puntatore 'master' in modo da farlo puntare al 'commit 3'. Si dice in questo
 caso che il merge si può fare in modo 'fast forward'.
 
 Invece di effettuare il merge assumiamo invece che ci sia del lavoro da fare
-su main. Lasciamo in sospeso quanto stiamo facendo su feature1 e Effettuiamo
-il checkout di main seguito da un commit. Otterremo la seguente situazione:
+su master. Lasciamo in sospeso quanto stiamo facendo su feature1 e Effettuiamo
+il checkout di master seguito da un commit. Otterremo la seguente situazione:
 
 ```
-* 884d3b5 (HEAD -> main) commit 4
+* 884d3b5 (HEAD -> master) commit 4
 | * f252716 (feature1) commit 3
 |/
 * bbcbc23 commit 2
@@ -345,18 +350,18 @@ il checkout di main seguito da un commit. Otterremo la seguente situazione:
 * 4f49020 initial commit
 ```
 
-L'output mostra che feature1 e main contengono entrambi delle modifiche e
+L'output mostra che feature1 e master contengono entrambi delle modifiche e
 che pertanto un merge fast forward non è possibile. Se a questo punto volessimo
-includere le modifiche apportate in feature1 dentro il branch main potremmo
+includere le modifiche apportate in feature1 dentro il branch master potremmo
 procedere usando il comando `git merge feature1`. Questo comando effettuerà
 un 'merge a tre vie'. In particolare discenderà nel grafo a partire dal branch
-corrente (main) e dal branch indicato (feature1) fino a trovare un antenato
-comune (commit2). A questo punto tenterà di fondere il contenuto di main, di
+corrente (master) e dal branch indicato (feature1) fino a trovare un antenato
+comune (commit2). A questo punto tenterà di fondere il contenuto di master, di
 feature1 e del commit 2 e (in caso di successo) creerà un nuovo commit che avrà
-come genitori sia main che feature1:
+come genitori sia master che feature1:
 
 ```
-*   7464f65 (HEAD -> main) Merge branch 'feature1'
+*   7464f65 (HEAD -> master) Merge branch 'feature1'
 |\
 | * f252716 (feature1) commit 3
 * | 884d3b5 commit 4
@@ -366,15 +371,15 @@ come genitori sia main che feature1:
 * 4f49020 initial commit
 ```
 
-Si noti che feature1 è fermo al commit3 mentre il branch main è stato
+Si noti che feature1 è fermo al commit3 mentre il branch master è stato
 spostato per farlo puntare al commit contenente il merge. Questo è corretto,
-infatti il merge ha incluso in main le modifiche in feature1, mentre
+infatti il merge ha incluso in master le modifiche in feature1, mentre
 feature1 è rimasto invariato. Si noti comunque che a questo punto feature1
-è direttamente collegato con main e che quindi un merge feature1 produrrebbe
+è direttamente collegato con master e che quindi un merge feature1 produrrebbe
 un merge fast forward:
 
 ```
-*   7464f65 (HEAD -> feature1, main) Merge branch 'feature1'
+*   7464f65 (HEAD -> feature1, master) Merge branch 'feature1'
 |\
 | * f252716 commit 3
 * | 884d3b5 commit 4
@@ -425,7 +430,7 @@ void swap(ArrayList<T> array, int pointer1, int pointer2) {
 }
 ```
 
-mentre nel branch main lo sviluppatore abbia invece pensato che fosse
+mentre nel branch master lo sviluppatore abbia invece pensato che fosse
 opportuno salvare qualche byte di prezioso spazio disco e abbia quindi
 eliminato il commento javadoc e modificato la definizione come segue:
 
@@ -504,7 +509,7 @@ effettuare il commit con `git commit`).
 La situazione a valle del commit sarà:
 
 ```
-*   1e9a44d (HEAD -> main) Fixed merge conflicts
+*   1e9a44d (HEAD -> master) Fixed merge conflicts
 |\
 | * c34dd0d (feature1) commit 3
 * | 17e2067 commit 4
