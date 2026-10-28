@@ -1,0 +1,11 @@
+*.csv
+SortedArray/*.csv
+SortedArray/*.docx
+SortedArray/*.pdf
+
+
+#PER IMPLEMENTAZIONE PROGETTO
+SortedArray/src/unity*
+SortedArray/bin/
+SortedArray/build/
+
