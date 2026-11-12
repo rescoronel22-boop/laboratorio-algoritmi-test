@@ -23,6 +23,7 @@ void swap(int *x, int *y);
 void quicksort(int array[], int length);
 void quicksort_recursion(int array[], int low, int high);
 int partition(int array[], int low, int high);
+void hybrid_sort(int array[], int low, int high, int k);
 
 void swap(int* x, int* y) {
     int temp = *x;
@@ -66,19 +67,41 @@ int partition(int array[], int low, int high) {
     return p;
 }
 
+void hybrid_sort(int array[], int low, int high, int k){
+    if (low < high) {
+        // Calcoliamo la dimensione del sottoarray corrente
+        int size = high - low + 1;
+
+        // Se la dimensione è minore o uguale alla soglia k, usiamo il Selection Sort
+        if (size <= k) {
+            selection_sort(array + low, size);
+        } 
+        else {
+            // Altrimenti procediamo con il QuickSort ricorsivo
+            int pi = partition(array, low, high);
+
+            // Chiamate ricorsive sulle due metà
+            hybrid_sort(array, low, pi - 1, k);
+            hybrid_sort(array, pi + 1, high, k);
+        }
+    }
+}
+
 int main(){
 	int n = 10;
 	int array[] = {23, 1, 4, 3, 24, 12, 45, 56, 67, 59};
+	int k = 4;
 	//printf("Selection sorting:\n");
-	printf("quicksort:\n");
+	//printf("quicksort:\n");
+	printf("hybrid_sort:\n");
 	
 	printf("Unsorted list: ");
 	for(int i = 0; i <= n-1; i++){
 		printf("%d ", array[i]);
 	}
-	quicksort(array, n);
+	hybrid_sort(array, 0, n - 1, k);
 	printf("\n\nSorted list: ");
-	for(int i = 0; i < n-1; i++){
+	for(int i = 0; i < n; i++){
 		printf("%d ", array[i]);
 	}
 	return 0;
