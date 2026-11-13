@@ -1,5 +1,11 @@
 #include<stdio.h>
 
+//funzioni prototipo
+void swap(int *x, int *y);
+void quicksort(int array[], int length);
+void quicksort_recursion(int array[], int low, int high);
+int partition(int array[], int low, int high);
+void hybrid_sort(int array[], int low, int high, int k);
 
 //implementazione iniziale selection sort
 void selection_sort(int array[], int length){
@@ -17,13 +23,6 @@ void selection_sort(int array[], int length){
 		}
 	}
 }
-
-//funzioni prototipo
-void swap(int *x, int *y);
-void quicksort(int array[], int length);
-void quicksort_recursion(int array[], int low, int high);
-int partition(int array[], int low, int high);
-void hybrid_sort(int array[], int low, int high, int k);
 
 void swap(int* x, int* y) {
     int temp = *x;
@@ -69,15 +68,14 @@ int partition(int array[], int low, int high) {
 
 void hybrid_sort(int array[], int low, int high, int k){
     if (low < high) {
-        // Calcoliamo la dimensione del sottoarray corrente
         int size = high - low + 1;
 
-        // Se la dimensione è minore o uguale alla soglia k, usiamo il Selection Sort
+        // Se la dimensione è minore o uguale a k selection sort
         if (size <= k) {
             selection_sort(array + low, size);
         } 
         else {
-            // Altrimenti procediamo con il QuickSort ricorsivo
+            // Altrimenti quicksort ricorsivo
             int pi = partition(array, low, high);
 
             // Chiamate ricorsive sulle due metà
