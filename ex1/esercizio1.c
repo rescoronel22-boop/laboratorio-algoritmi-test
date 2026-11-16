@@ -9,17 +9,18 @@ void hybrid_sort(int array[], int low, int high, int k);
 
 //implementazione iniziale selection sort
 void selection_sort(int array[], int length){
-	int min, temp;
+	int min;
 	for(int i = 0; i <= length - 1; i++){
 		min = i;
 		for(int j = i + 1; j <= length - 1; j++){
 			if(array[j] < array[min]){
 				min = j;
 			}
-			//swap
-			temp = array[min];
-			array[min] = array[i];
-			array[i] = temp;
+			
+		}
+		//swap
+		if(min != i){
+			swap(&array[min], &array[i]);
 		}
 	}
 }
@@ -28,7 +29,7 @@ void swap(int* x, int* y) {
     int temp = *x;
     *x = *y;
     *y = temp;
-}
+} 
 
 //implementazione iniziale quicksort
 void quicksort(int array[], int length){
@@ -53,15 +54,11 @@ int partition(int array[], int low, int high) {
         if(array[k] <= x){
             p++;
             //swap
-            int temp = array[p];
-            array[p] = array[k];
-            array[k] = temp;
+            swap(&array[p], &array[k]);
         }
     }
     // Posiziona il pivot al suo posto definitivo
-    int temp = array[p];
-	array[low] = array[p];
-    array[p] = temp;
+    swap(&array[low], &array[p]);
     
     return p;
 }
