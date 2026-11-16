@@ -1,7 +1,9 @@
 #include<stdio.h>
+#include <stddef.h>
+#include <string.h> //per memcpy
 
 //funzioni prototipo
-void swap(int *x, int *y);
+void swap(int *x, int *y, size_t size);
 void quicksort(int array[], int length);
 void quicksort_recursion(int array[], int low, int high);
 int partition(int array[], int low, int high);
@@ -25,10 +27,11 @@ void selection_sort(int array[], int length){
 	}
 }
 
-void swap(int* x, int* y) {
-    int temp = *x;
-    *x = *y;
-    *y = temp;
+void swap(int* x, int* y, size_t size) {
+    char temp[size];
+    memcpy(temp, x, size);
+    memcpy(x, y, size);
+    memcpy(y, temp, size);
 } 
 
 //implementazione iniziale quicksort
