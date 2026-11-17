@@ -22,7 +22,7 @@ void selection_sort(int array[], int length){
 		}
 		//swap
 		if(min != i){
-			swap(&array[min], &array[i]);
+			swap(&array[min], &array[i], sizeof(int));
 		}
 	}
 }
@@ -57,11 +57,11 @@ int partition(int array[], int low, int high) {
         if(array[k] <= x){
             p++;
             //swap
-            swap(&array[p], &array[k]);
+            swap(&array[p], &array[k], sizeof(int));
         }
     }
     // Posiziona il pivot al suo posto definitivo
-    swap(&array[low], &array[p]);
+    swap(&array[low], &array[p], sizeof(int));
     
     return p;
 }

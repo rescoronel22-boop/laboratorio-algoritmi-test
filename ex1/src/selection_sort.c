@@ -12,13 +12,12 @@ void selection_sort(void *base, size_t numero_items, size_t size, int (*compar)(
     if (numero_items <= 1 || base == NULL) {
         return;
     }
-
     //spostamento di un byte alla volta
     char *array = (char *)base;
     for (size_t i = 0; i < numero_items - 1; i++) {
         size_t min = i;
         for (size_t j = i + 1; j < numero_items; j++) {
-            //calcolo degli indirizzigit 
+            //calcolo degli indirizzi
             void *elem_j = array + j * size;
             void *elem_min = array + min * size;
 
