@@ -1,15 +1,17 @@
-all:
-	mkdir -p src
-	mv -n *.c *.h src/ 2>/dev/null || true
-	$(MAKE) bin/esercizio1
+.PHONY: all test clean
 
-bin/esercizio1: build/esercizio1.o
+all: bin/test_ex1
+
+test: bin/test_ex1
+	./bin/test_ex1
+
+bin/test_ex1: build/test_ex1.o build/selection_sort.o build/quick_sort.o build/hybrid_sort.o
 	mkdir -p bin
-	cc -o bin/esercizio1 build/esercizio1.o
+	cc -o bin/test_ex1 build/test_ex1.o build/selection_sort.o build/quick_sort.o build/hybrid_sort.o
 
-build/esercizio1.o: src/esercizio1.c
+build/%.o: src/%.c
 	mkdir -p build
-	cc -Isrc -c src/esercizio1.c -o build/esercizio1.o
+	cc -Wall -Wextra -Isrc -Isrc/h -c $< -o $@
 
 clean:
 	rm -rf build bin
